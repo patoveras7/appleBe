@@ -1,0 +1,62 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 1.5em 1.5em 1.5em 1.5em;
+    background-color: rgb(2, 5, 48);
+    padding: 1em 1em 1em 1em;
+    opacity: 0.4;
+    justify-content: space-between;
+    position: relative;
+    
+    }
+
+    .navbar:hover{
+        opacity: 1;
+    }
+
+    .left{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+        
+    }
+    
+    .title{
+        margin-left: 1em;
+        color: white;
+        font-size: 2em;
+    }
+
+    .logoNav{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 0.5em;
+    margin: auto; 
+    }
+    
+    .options{
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+        gap: 2em;
+        margin-right: 0.5em;
+    }
+    
+    .buttonOptions {
+        color: gray;
+        cursor: pointer;
+        border: 3px solid gray;
+        border-radius: 1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        transition: 1.3s;
+        
+    
+        &:hover{
+            color: white;
+            border: none;
+            background-color: grey;
+            box-shadow: 0.1em 0.1em 0.1em 0.1em white;
+            transform: scale(1.3);
+        }
+    }
+    

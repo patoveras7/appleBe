@@ -1,0 +1,115 @@
+.fatherContainer{
+    display: flex;  
+    width: 100%;
+    height: 100%; 
+    align-content:center;
+    justify-content: center;
+    margin: 2em 2em 3.5em 2em;    
+}
+
+.sonContainer{
+    display: flex;
+    gap: 25em;
+    align-items: center;   
+}
+
+.imageContainer{
+
+        width: 36em;
+        height: 50em;
+        border-radius: 1.5em;
+        border: 2px solid black;
+        overflow: hidden;
+}
+
+.detailContainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        width: 36em;
+        height: 50em;
+        border-radius: 1.5em;
+        border: 2px solid black;
+        overflow: hidden;
+        background-color: white;
+        opacity: 0.8;
+        gap: 2em;
+        
+}
+
+.detailContainer:hover{
+    opacity: 1;
+    .button{
+        transform: scale(1.2);
+        box-shadow: gold 0.1em 0.1em 0.1em 0.1em;
+    }
+}
+
+
+.image{
+    position:relative;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.background{
+    background-image: url("/images/wallpaper2.jfif");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.name{
+    font-size: 4em;
+}
+.stars{
+    font-size: 2em;
+}
+
+.description{
+    font-size: 1.4em;
+    text-align: justify;
+    margin: 0 1em 0 1em;
+}
+
+.price{
+    
+    background-color: gold;
+    font-size: 1.2em;
+    width: 50%;
+    margin-right: 50%;
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+.stock{
+    width: 50%;
+    margin-left: 50%;
+    background-color: gold;
+    font-size: 1.2em;
+    padding: 0em 0.5em 0em 0.5em;
+
+}
+
+.button{
+    background-color: green;
+    border: white 3px solid;
+    border-radius: 0.5em;
+    padding: 0em 0.5em 0em 0.5em;
+    font-size: 1.2em;
+    width: fit-content;
+    transition: 2s;
+}
+
+.buttonContainer{
+    margin-top: 2em;
+}
