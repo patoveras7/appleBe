@@ -1,4 +1,3 @@
-import styles from '../../styles/cardList.module.css'
 import { getProductsDB } from '@/helpers/product.helpers';
 import CardProduct from '../cards/CardProduct';
 import React from 'react';
@@ -9,18 +8,17 @@ const products = await getProductsDB();
   return (
    
     <>
-    <div className="relative w-full h-full p-[2em_4em_3.5em_4em] flex items-center justify-around flex-wrap gap-[3em]">     
-    {
-        products &&
-        products?.map((product) => {
-          return (
-          <CardProduct key={product.id} {...product}/> 
-          )
-        })
-  }
-  </div>
-  <div className={styles.background}></div>
-  </>
+            <div className="w-full h-sreen p-[10px_30px_10px_35px] flex items-center justify-around flex-wrap gap-[30px] bg-slate-700">     
+            {
+                products &&
+                products?.map((product) => {
+                  return (
+                  <CardProduct key={product.id} {...product}/> 
+                  )
+                })
+          }
+          </div>
+ </>
 
   )
 }

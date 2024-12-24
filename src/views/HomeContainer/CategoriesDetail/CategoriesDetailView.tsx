@@ -1,4 +1,3 @@
-import styles from "../../../styles/cardList.module.css"
 import CardProduct from "@/components/cards/CardProduct";
 import categoriesToPreLoad from "@/helpers/categories";
 import { getCategoriesById } from "@/helpers/product.helpers";
@@ -20,8 +19,8 @@ const CategoriesDetailView = async ({categoryId}: {categoryId: string}) => {
     
   
     return (
-    <>
-    <div className={styles.cardsContainer}>
+   
+    <div className="w-full h-screen p-[10px_30px_10px_35px] flex items-center justify-around flex-wrap gap-[30px] bg-slate-700">
     {
         products &&
         products?.map((product) => {
@@ -31,10 +30,10 @@ const CategoriesDetailView = async ({categoryId}: {categoryId: string}) => {
         })
     }
     </div>
-    <div className={styles.background}></div>
     
     
-    </>
+    
+   
   )
 }
 

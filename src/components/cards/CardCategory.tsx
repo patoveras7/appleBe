@@ -8,9 +8,9 @@ const CardCategory: React.FC<ICategory> = ({name, image, id}) => {
 
 
   return (
-    <Link href={`/products/${id}`}><div className="flex justify-center flex-col relative text-center w-[21em] h-[28em] rounded-[1.5em] border-2 border-white my-[1em] overflow-hidden transition-transform duration-1000 hover:scale-125 hover:z-10 group relative">
-        <div className="text-[1.5em] z-20 bg-black text-white border-2 border-solid border-white rounded-lg p-3 mx-auto hidden group-hover:block"><strong>{name}</strong></div>
-        <img className="absolute top-0 left-0 w-full h-full object-cover z-[1]" src={image} alt="category" />
+    <Link href={`/products/${id}`}><div className="flex felx-col justify-center items-center relative h-[310px] w-[240px] rounded-[1.5em] border-2 border-white my-4 overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-white">
+        <div className="text-[24px] z-20 bg-black text-white border-[2px] border-solid border-white rounded-[4px] p-[8px] mx-auto"><strong>{name}</strong></div>
+        <img className="absolute w-full h-full object-cover" src={image} alt="category" />
     </div></Link>
   )
 }

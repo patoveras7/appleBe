@@ -1,4 +1,3 @@
-import styles from '../../styles/cardList.module.css'
 import categoriesToPreLoad from "@/helpers/categories"
 import CardCategory from "../cards/CardCategory";
 
@@ -9,8 +8,8 @@ const categories = categoriesToPreLoad;
 
 
   return ( 
-    <>
-         <div className={styles.cardsContainer}>
+    
+         <div className="w-full h-screen p-[10px_30px_10px_35px] flex items-center justify-around flex-wrap gap-[18px] 2xl:gap-[90px] xl:gap-[70px] bg-slate-700">
     {
         categories &&
         categories?.map((categorie) => {
@@ -20,8 +19,8 @@ const categories = categoriesToPreLoad;
         })
   }
  </div>
- <div className={styles.background}></div>
-  </>
+
+  
   )
 }
 

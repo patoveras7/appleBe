@@ -1,5 +1,4 @@
 'use client'
-import styles from '../../styles/card.module.css'
 import { IProduct, IUserSession } from "@/interfaces/Types"
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -8,7 +7,9 @@ import Swal from 'sweetalert2'
 
 
 export const CardProduct: React.FC<IProduct> = ({name, price, image, stock, id}) => { 
+
   const router = useRouter();
+  
   const [userData, setUserData] = useState<IUserSession | null>(null);
   
 
@@ -65,20 +66,17 @@ export const CardProduct: React.FC<IProduct> = ({name, price, image, stock, id})
 
 return (
     
-              <div className={styles.cardProduct}>
-                    <div className={styles.details}>
+              <div className="flex felx-col justify-center items-center relative h-[310px] w-[240px] rounded-[1.5em] border-2 border-white my-4 overflow-hidden transition-transform duration-1000 hover:scale-[1.3] hover:z-10 group">
+                    <div className="flex flex-col absolute bottom-[-110%] h-[310px] w-[240px] items center p-[1.5em] pb-[2em] bg-[#000a] transition-all duration-2000 text-white z-10 gap-[0.5em] group-hover:bottom-[-10%]">
                         <h1>{name} ⭐⭐⭐⭐⭐</h1>
                         <h2>How Much? ${price}</h2>
                         <p>Hurry!! {stock} in stock</p>
-                        <div className={styles.buttonsContainer}>
-                        <Link href={`/product/${id}`}><button className={styles.button1}>See product details</button></Link>  
-                        <button onClick={handleClick} className={styles.button3}>Add to Be cart 🛒</button>
+                        <div className="flex flex-col items-center gap-[1em] mt-[1.3em]">
+                        <Link href={`/product/${id}`}><button className="bg-[rgb(3,7,73)] border-3 border-white rounded-[0.5em] px-2 py-0 hover:shadow-[0_0_1em_white]">See product details</button></Link>  
+                        <button onClick={handleClick} className="bg-green-500 border-3 border-white rounded-[0.5em] px-2 py-0 hover:shadow-[0_0_1em_white]">Add to Be cart 🛒</button>
                         </div>                    
                     </div>
-                    <img src={image} alt={name} className={styles.poster}/>
-
-                    
-                    
+                    <img src={image} alt={name} className="realtive w-full h-full object-cover"/>
               </div>   
   
   )

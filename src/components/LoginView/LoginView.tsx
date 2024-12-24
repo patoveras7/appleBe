@@ -1,6 +1,5 @@
 "use client"
 import { login } from "@/helpers/auth.helpers"
-import styles from "../../styles/login.module.css"
 import { validateLoginErrors, validateLoginForm } from "@/helpers/validate"
 import { ILoginErrors, ILoginProps } from "@/interfaces/Types"
 import { useEffect, useState } from "react"
@@ -56,15 +55,16 @@ const LoginView = () => {
   
   
   return (
-  <div>
-      <div className={styles.container}>
+  
+      <div className='bg-[url("/images/LoginFondoVale.jpg")] bg-cover bg-center w-full h-screen flex items-center justify-center lg:justify-end'>
 
-            <div className={styles.formContainer}>
+            <div className="text-white flex flex-col gap-[40px] bg-[rgb(3,7,73)] lg:mr-[35px] xl:mr-[105px] 2xl:mr-[230px] h-[500px] sm:h-[600px] w-[300px] sm:w-[350px] p-[25px] pt-[50px] rounded-[12px] shadow-lg transition-shadow hover:shadow-[0_0_1em_white] opacity-[0.8]">
 
-                <form onSubmit={handleSubmit}>
+                <h1 className="text-white text-4xl font-bold flex justify-start w-full sm:ml-[22px]">Sign In</h1>
+
+                <form onSubmit={handleSubmit} className="flex flex-col gap-[20px] items-center">
     
                       <div>
-                      <label htmlFor="email" className={styles.label}><strong>Email:</strong></label>
                       <input
                       id="email"
                       name="email"
@@ -72,40 +72,37 @@ const LoginView = () => {
                       value={dataUser.email} 
                       onChange={handleChange}
                       autoComplete="off"
-                      className={styles.input}
+                      className="w-[250px] h-[50px] rounded-[4px] text-black font-bold"
+                      placeholder=" example@mail.com"
                       />
                       {dataUser.email && errors.email && <p style={{color:"red"}}>{errors.email}</p>} 
                       </div>  
 
-                      <div>
-                      <label htmlFor="password" className={styles.label}><strong>Password:</strong></label>
+                     <div>
                       <input
                       id="password"
                       name="password"
                       type="password"
                       value={dataUser.password} 
                       onChange={handleChange}
-                      placeholder="********"
+                      placeholder=" Password"
                       autoComplete="off"
-                      className={styles.input}
+                      className="w-[250px] h-[50px] rounded-[4px] text-black font-bold"
                       /> 
                       {dataUser.password && errors.password && <p style={{color:"red"}}>{errors.password}</p>}
                       </div>   
-                      <button disabled={!validateLoginForm(dataUser)} type="submit" className={styles.button}>Submit</button>
+                      <button disabled={!validateLoginForm(dataUser)} type="submit" className="w-[250px] h-[37px] rounded-[4px] text-white font-bold bg-rose-700">Sign In</button>
+                      <h3>Forgot password?</h3>
+              
               </form>
 
-        </div>
+              <p className="text-[12px]">This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
 
-        <div className={styles.coment}>
-          <div className={styles.question}><p><strong>What we gonna do?</strong></p></div>
-          <div className={styles.answer}><p><strong>Sink a tooth into the world 🦷🌎...</strong></p></div>
         </div>
 
     </div>
 
-    <div className={styles.background}></div>
 
-    </div>
   )
 }
 export default LoginView
