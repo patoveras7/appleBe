@@ -27,6 +27,7 @@ export async function getProductById(id: string): Promise<IProduct> {
         throw new Error(error)
     }
 };
+
 export async function getCategoriesById(id: string): Promise<IProduct[]> {
     try {
         const allProducts: IProduct[] = await getProductsDB();
