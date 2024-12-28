@@ -57,7 +57,7 @@ const RegisterView = () => {
           <img src="https://i.pinimg.com/236x/fa/5e/67/fa5e67376018e06bd8ffb06b3129a717.jpg" alt="logo" className="w-[32px] h-[32px] md:w-[34px] md:h-[34px] lg:w-[36px] lg:h-[36px]" />
           </div>
 
-          <div className="text-white flex flex-col bg-[rgb(3,7,73)] h-fit w-[300px] sm:w-[350px] p-[25px] rounded-[4px] shadow-lg shadow-white opacity-[0.8]">
+          <div className="text-white flex flex-col bg-[rgb(3,7,73)] h-fit w-[300px] sm:w-[350px] p-[25px] rounded-[4px] shadow-lg shadow-white opacity-[0.8] mb-[20px]">
 
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-[25px] text-[12px] sm:text-[14px] md:text-[14px]">
