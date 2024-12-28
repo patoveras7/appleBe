@@ -50,17 +50,17 @@ const RegisterView = () => {
     return (
  
 
-      <div className='bg-[url("/images/blueApple.jpg")] bg-cover bg-center w-full h-screen flex flex-col items-center gap-[50px]'>
+      <div className='bg-[url("/images/blueApple.jpg")] bg-cover bg-center w-full min-h-screen flex flex-col items-center gap-[50px]'>
 
           <div className="flex items-center justify-center mt-[40px] gap-[5px] p-[6px] rounded-[4px] bg-black">
           <h1 className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]"><strong>Be Apple in your life!!</strong></h1>
           <img src="https://i.pinimg.com/236x/fa/5e/67/fa5e67376018e06bd8ffb06b3129a717.jpg" alt="logo" className="w-[32px] h-[32px] md:w-[34px] md:h-[34px] lg:w-[36px] lg:h-[36px]" />
           </div>
 
-          <div className="text-white flex flex-col bg-[rgb(3,7,73)] h-[580px] sm:h-[615px] lg:h-[630px] w-[300px] sm:w-[350px] p-[25px] rounded-[4px] shadow-lg shadow-white opacity-[0.8]">
+          <div className="text-white flex flex-col bg-[rgb(3,7,73)] h-fit w-[300px] sm:w-[350px] p-[25px] rounded-[4px] shadow-lg shadow-white opacity-[0.8]">
 
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-[25px] text-[16px] sm:text-[18px] md:text-[20px]">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-[25px] text-[12px] sm:text-[14px] md:text-[14px]">
         
               <div className="flex flex-col gap-[2px]">
               <label htmlFor="name" className="font-bold">Name</label>
