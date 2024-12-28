@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileView from '@/views/HomeContainer/ProfileView/ProfileView'
+import ProfileView from '@/components/ProfileView/ProfileView'
 
 
 const page = () => {

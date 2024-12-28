@@ -62,7 +62,7 @@ const CartView = () => {
 
 
   return (
-    <div className='bg-[url("/images/fullCartVale.jpg")] bg-cover bg-center w-full h-screen flex flex-col items-center justify-center'>
+    <div className='bg-[url("/images/fullCartVale.jpg")] bg-cover bg-center w-full min-h-screen flex flex-col items-center justify-center'>
       {cart && cart.length > 0 ? (
         <div className="flex flex-col justify-center items-center gap-[10px] mt-[100px] ml-[20px] mr-[20px]">
           {cart.map(product => (

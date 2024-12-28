@@ -1,4 +1,4 @@
-import OrdersView from "@/views/HomeContainer/OrdersView/OrdersView";
+import OrdersView from "@/components/OrdersView/OrdersView";
 
 
 const Orders = () => {

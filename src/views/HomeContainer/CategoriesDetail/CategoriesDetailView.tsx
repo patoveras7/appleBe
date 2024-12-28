@@ -20,7 +20,7 @@ const CategoriesDetailView = async ({categoryId}: {categoryId: string}) => {
   
     return (
    
-        <div className="w-full h-sreen p-[10px_30px_10px_35px] flex items-center justify-around flex-wrap gap-[30px] bg-slate-700">
+        <div className="w-full h-screen p-[10px_30px_10px_35px] flex items-center justify-around flex-wrap gap-[30px] bg-slate-700">
     {
         products &&
         products?.map((product) => {

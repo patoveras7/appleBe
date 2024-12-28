@@ -1,13 +1,9 @@
 export default function PageNotFound() {
     return (
-        <div className="relative flex items-center justify-center h-screen overflow-hidden">
-      <div
-        className="bg-cover bg-center w-full min-h-full top-0 left-0 right-0 bottom-0 fixed -z-10"
-        style={{
-          backgroundImage: "url('https://i.pinimg.com/originals/05/64/47/056447175f803e2b9943d1dac22681d0.gif')",
-        }}
-      />
-      <div className="relative z-10 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center">
+
+      <div className='bg-[url("https://i.pinimg.com/originals/05/64/47/056447175f803e2b9943d1dac22681d0.gif")] bg-cover bg-center w-full h-screen flex flex-col items-center justify-center'>
+      
+      <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center ml-[10px] mr-[10px]">
         <h1 className="text-6xl font-bold text-gray-800">404</h1>
         <h2 className="mt-4 text-2xl font-semibold text-gray-600">Page not found</h2>
         <p className="mt-2 text-gray-500">
@@ -21,5 +17,7 @@ export default function PageNotFound() {
         </a>
       </div>
     </div>
+   
     );
 }
+
